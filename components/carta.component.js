@@ -1,4 +1,4 @@
-const Carta = () => {
+const Carta = (props) => {
     return <div className='card mb-2'>
         <div className='card-body'>
             <ul className="nav nav-pills justify-content-center mb-2">
@@ -13,30 +13,18 @@ const Carta = () => {
                 </li>
             </ul>
             <div className='row'>
-                <div className='col-md-4'>
-                    <div className='card'>
-                        <img className="card-img-top" src='https://comidasperuanas.net/wp-content/uploads/2020/10/Sopa-Seca.webp' />
-                        <div className='card-body text-center'>
-                            <p className="card-text">Sopa Seca</p>
+                {
+                    props.platos.map((plato) => {
+                        return <div key={ plato.id } className='col-md-4'>
+                            <div className='card'>
+                                <img className="card-img-top" src={ plato.url } />
+                                <div className='card-body text-center'>
+                                    <p className="card-text">{ plato.nombre }</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div className='col-md-4'>
-                    <div className='card'>
-                        <img className="card-img-top" src='https://comidasperuanas.net/wp-content/uploads/2020/10/Sopa-Seca.webp' />
-                        <div className='card-body text-center'>
-                            <p className="card-text">Sopa Seca</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-md-4'>
-                    <div className='card'>
-                        <img className="card-img-top" src='https://comidasperuanas.net/wp-content/uploads/2020/10/Sopa-Seca.webp' />
-                        <div className='card-body text-center'>
-                            <p className="card-text">Sopa Seca</p>
-                        </div>
-                    </div>
-                </div>
+                    })
+                }
             </div>
 
         </div>

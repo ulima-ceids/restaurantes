@@ -1,4 +1,4 @@
-const MenuNavegacion = () => {
+const MenuNavegacion = (props) => {
     return <nav className="navbar navbar-expand-lg navbar-light bg-light mb-2">
         <div className="container-fluid">
             <a className="navbar-brand" href="#">Restaurantes!</a>
@@ -7,12 +7,13 @@ const MenuNavegacion = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Login</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Registro</a>
-                    </li>
+                    {
+                        props.menus.map((menu) => {
+                            return <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="#">{ menu }</a>
+                            </li>
+                        })
+                    }
                 </ul>
             </div>
         </div>
