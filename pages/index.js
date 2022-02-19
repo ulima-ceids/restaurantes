@@ -28,6 +28,18 @@ export default function Home() {
             nombre : "Chicharron de pescado",
             categoria : "Marina",
             url : "https://unareceta.com/wp-content/uploads/2017/09/Receta-de-chicharro%CC%81n-de-pescado-ecuatoriano-640x427.jpg"
+        },
+        {
+            id : 4,
+            nombre : "Arroz con pollo",
+            categoria : "Criolla",
+            url : "https://i.ytimg.com/vi/H6lgxgEWIs8/maxresdefault.jpg"
+        },
+        {
+            id : 5,
+            nombre : "Picarones",
+            categoria : "Postres",
+            url : "https://micomidaperuana.com/wp-content/uploads/2019/09/picarones-peruanos.jpg"
         }
     ]
 
